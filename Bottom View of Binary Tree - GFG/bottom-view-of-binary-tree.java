@@ -131,7 +131,7 @@ class Solution{
 
     {
 		ArrayList<Integer> ans=new ArrayList<>();
-		// if(root == null) return ans;
+		 if(root == null) return ans;
 
 		Queue<Pair> q=new LinkedList<>();
 		HashMap<Integer,Integer> hm=new HashMap<>();
