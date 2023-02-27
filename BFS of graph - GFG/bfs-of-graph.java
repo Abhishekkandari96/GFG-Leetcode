@@ -39,9 +39,7 @@ class Solution {
        
         boolean visited[]=new boolean[V];
         ArrayList<Integer> list=new ArrayList<>();
-        
-        
-             Queue<Integer> q=new LinkedList<>();
+        Queue<Integer> q=new LinkedList<>();
             q.add(0);
             while(q.size()>0){
                 int curr=q.remove();
@@ -51,12 +49,9 @@ class Solution {
                 for(int vertex:adj.get(curr)){
                     if(visited[vertex]==false) 
                     q.add(vertex);
-                    
                 }
             }
         }
-       
-    
      return list;
 }
 }
