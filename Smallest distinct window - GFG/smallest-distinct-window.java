@@ -48,27 +48,27 @@ class Solution {
         int start=0;
         int end=0;
         int arr[]=new int[130];
-        int k=0;
+        int countUnique=0;
         
         while(end<str.length()){
             
-            arr[str.charAt(end)]++; // a=2 ,
+            arr[str.charAt(end)]++;
             
             if(arr[str.charAt(end)]==1){
-                k++;                        //k=1
+                countUnique++;                      
             }
-            while(start<=n-1 && k>=unique ){
+            while(start<=n-1 && countUnique==unique ){
                  length=Math.min(length,end-start+1);
                 
                 arr[str.charAt(start)]--;
                 if( arr[str.charAt(start)]==0){
-                    k--;
+                    countUnique--;
                 }
                 start++;
                 
             }
             
-            end++;                                   // 1
+            end++;                                   
             
         }
         return length;
