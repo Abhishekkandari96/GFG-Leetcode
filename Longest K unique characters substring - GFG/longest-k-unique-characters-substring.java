@@ -62,13 +62,13 @@ class Solution {
                 //increment unique count
                 count++;
             }
-            expand++;
+           
             //else count will remain same
             
              //step2=work/calculate;
             
             if(count==k){
-                potentialAns=Math.max(potentialAns,expand-contract);
+                potentialAns=Math.max(potentialAns,expand-contract+1);
             }
             
             //step 3-contraction
@@ -81,6 +81,7 @@ class Solution {
                 }
                 contract++;
             }
+             expand++;
             
            
             
