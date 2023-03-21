@@ -9,7 +9,7 @@ class Solution {
         int j=0;
         for(int i=0;i<n;i++){
             
-            if(dq.size()>0 && dq.peek()<i-k+1 )
+            if(dq.size()>0 && i-dq.peek()>=k ) // when sizeof 
                 dq.removeFirst();
             
             while(dq.size()>0 && nums[dq.peekLast()]<nums[i] )
